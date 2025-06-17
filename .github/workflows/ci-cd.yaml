@@ -213,7 +213,7 @@ jobs:
       - name: Get VERSION from branch name
         id: get_version
         run: |
-          echo "VERSION=${GITHUB_REF##*/}" >> $GITHUB_ENV
+          echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
 
       - name: Get short commit ID
         id: get_commit
